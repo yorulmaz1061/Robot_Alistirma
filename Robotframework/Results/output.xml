@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220822 08:39:02.745" rpa="false" schemaversion="3">
+<suite id="s1" name="BasicSearch" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\eBay\BasicSearch.robot">
+<test id="s1-t1" name="Verify basic search functionality" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.ebay.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220822 08:39:03.131" level="INFO">Opening browser 'chrome' to base url 'https://www.ebay.com'.</msg>
+<status status="PASS" starttime="20220822 08:39:03.130" endtime="20220822 08:39:09.091"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="gh-ac"]</arg>
+<arg>mobile</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 08:39:09.093" level="INFO">Typing text 'mobile' into text field '//*[@id="gh-ac"]'.</msg>
+<status status="PASS" starttime="20220822 08:39:09.092" endtime="20220822 08:39:09.252"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//*[@id="gh-btn"]</arg>
+<arg>[Return]</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220822 08:39:09.253" level="INFO">Sending key(s) ('[Return]',) to //*[@id="gh-btn"] element.</msg>
+<msg timestamp="20220822 08:39:13.657" level="INFO">Sending keys [Return]</msg>
+<status status="PASS" starttime="20220822 08:39:09.253" endtime="20220822 08:39:13.688"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>results for mobile</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220822 08:39:13.732" level="INFO">Current page contains text 'results for mobile'.</msg>
+<status status="PASS" starttime="20220822 08:39:13.688" endtime="20220822 08:39:13.733"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220822 08:39:13.734" endtime="20220822 08:39:16.038"/>
+</kw>
+<doc>This test case verifies the basic search functionality</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20220822 08:39:03.129" endtime="20220822 08:39:16.040"/>
+</test>
+<doc>Basic Search Functionality</doc>
+<status status="PASS" starttime="20220822 08:39:02.748" endtime="20220822 08:39:16.047"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BasicSearch">BasicSearch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

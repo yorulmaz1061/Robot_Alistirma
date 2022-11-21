@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221114 13:00:23.135" rpa="false" schemaversion="3">
+<suite id="s1" name="WorkingWithWebelements" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\WorkingWithWebelements.robot">
+<test id="s1-t1" name="Test Case to demostrate WebElement Operation Keywords" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://google.com</arg>
+<arg>Chrome</arg>
+<arg>alias=ChromeRCV</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221114 13:00:23.785" level="INFO">Opening browser 'Chrome' to base url 'http://google.com'.</msg>
+<msg timestamp="20221114 13:00:26.724" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221114 13:00:26.726" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BFACD3+2075859]
+	Ordinal0 [0x00B8EE61+1633889]
+	Ordinal0 [0x00A8B7BD+571325]
+	Ordinal0 [0x00A87CD2+556242]
+	Ordinal0 [0x00A7EC5D+519261]
+	Ordinal0 [0x00A7FAEC+522988]
+	Ordinal0 [0x00A7EF27+519975]
+	Ordinal0 [0x00A7E2EB+516843]
+	Ordinal0 [0x00A7E231+516657]
+	Ordinal0 [0x00A7D0A3+512163]
+	Ordinal0 [0x00A7D5AD+513453]
+	Ordinal0 [0x00A8D0CE+577742]
+	Ordinal0 [0x00AEBC7D+965757]
+	Ordinal0 [0x00AD731C+881436]
+	Ordinal0 [0x00AEB56A+963946]
+	Ordinal0 [0x00AD7136+880950]
+	Ordinal0 [0x00AAFEFD+720637]
+	Ordinal0 [0x00AB0F3F+724799]
+	GetHandleVerifier [0x00EAEED2+2769538]
+	GetHandleVerifier [0x00EA0D95+2711877]
+	GetHandleVerifier [0x00C8A03A+521194]
+	GetHandleVerifier [0x00C88DA0+516432]
+	Ordinal0 [0x00B9682C+1665068]
+	Ordinal0 [0x00B9B128+1683752]
+	Ordinal0 [0x00B9B215+1683989]
+	Ordinal0 [0x00BA6484+1729668]
+	BaseThreadInitThunk [0x76ECFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x773F7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x773F7B8E+238]
+</msg>
+<status status="FAIL" starttime="20221114 13:00:23.784" endtime="20221114 13:00:26.733"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20221114 13:00:26.734" endtime="20221114 13:00:26.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221114 13:00:26.735" endtime="20221114 13:00:26.735"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${attr}</var>
+<arg>xpath://*[@id="tsf"]//div[3]/center/input[1]</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20221114 13:00:26.736" endtime="20221114 13:00:26.736"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${attr}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221114 13:00:26.737" endtime="20221114 13:00:26.737"/>
+</kw>
+<doc>Test Case to demostrate WebElement Operation Keywords</doc>
+<status status="FAIL" starttime="20221114 13:00:23.782" endtime="20221114 13:00:26.740">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BFACD3+2075859]
+	Ordinal0 [0x00B8EE61+1633889]
+	Ordinal0 [0x00A8B7BD+571325]
+	Ordinal0 [0x00A87CD2+556242]
+	Ordinal0 [0x00A7EC5D+519261]
+	Ordinal0 [0x00A7FAEC+522988]
+	Ordinal0 [0x00A7EF27+519975]
+	Ordinal0 [0x00A7E2EB+516843]
+	Ordinal0 [0x00A7E231+516657]
+	Ordinal0 [0x00A7D0A3+512163]
+	Ordinal0 [0x00A7D5AD+513453]
+	Ordinal0 [0x00A8D0CE+577742]
+	Ordinal0 [0x00AEBC7D+965757]
+	Ordinal0 [0x00AD731C+881436]
+	Ordinal0 [0x00AEB56A+963946]
+	Ordinal0 [0x00AD7136+880950]
+	Ordinal0 [0x00AAFEFD+720637]
+	Ordinal0 [0x00AB0F3F+724799]
+	GetHandleVerifier [0x00EAEED2+2769538]
+	GetHandleVerifier [0x00EA0D95+2711877]
+	GetHandleVerifier [0x00C8A03A+521194]
+	GetHandleVerifier [0x00C88DA0+516432]
+	Ordinal0 [0x00B9682C+1665068]
+	Ordinal0 [0x00B9B128+1683752]
+	Ordinal0 [0x00B9B215+1683989]
+	Ordinal0 [0x00BA6484+1729668]
+	BaseThreadInitThunk [0x76ECFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x773F7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x773F7B8E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20221114 13:00:23.140" endtime="20221114 13:00:26.742"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="WorkingWithWebelements">WorkingWithWebelements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

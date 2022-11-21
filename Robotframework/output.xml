@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221114 13:20:23.521" rpa="false" schemaversion="3">
+<suite id="s1" name="Test1" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\Test1.robot">
+<test id="s1-t1" name="Test Case to demostrate WebElement Operation Keywords" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://osf.digital/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221114 13:20:23.997" level="INFO">Opening browser 'Chrome' to base url 'https://osf.digital/'.</msg>
+<status status="PASS" starttime="20221114 13:20:23.996" endtime="20221114 13:20:35.794"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 13:20:37.805" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221114 13:20:35.795" endtime="20221114 13:20:37.805"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=a[id='CybotCookiebotDialogBodyLevelButtonAccept']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221114 13:20:37.806" level="INFO">Clicking element 'css=a[id='CybotCookiebotDialogBodyLevelButtonAccept']'.</msg>
+<status status="PASS" starttime="20221114 13:20:37.806" endtime="20221114 13:20:37.933"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221114 13:20:41.946" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20221114 13:20:37.933" endtime="20221114 13:20:41.946"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${attr}</var>
+<arg>css=h3[class='inner-content__title skin7']</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20221114 13:20:41.995" level="INFO">${attr} = inner-content__title skin7</msg>
+<status status="PASS" starttime="20221114 13:20:41.947" endtime="20221114 13:20:41.995"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${attr}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221114 13:20:41.996" endtime="20221114 13:20:41.997"/>
+</kw>
+<doc>Test Case to demostrate WebElement Operation Keywords</doc>
+<status status="PASS" starttime="20221114 13:20:23.995" endtime="20221114 13:20:41.998"/>
+</test>
+<status status="PASS" starttime="20221114 13:20:23.525" endtime="20221114 13:20:42.000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
