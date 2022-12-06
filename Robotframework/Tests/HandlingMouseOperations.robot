@@ -42,6 +42,8 @@ Test Case to demonstrate mouse operations in Robot Framework
     Sleep  2s
 
     Close Browser
+    
+    Should Be Equal    first    second
 
 
 

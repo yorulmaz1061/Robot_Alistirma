@@ -1,108 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221114 13:00:23.135" rpa="false" schemaversion="3">
-<suite id="s1" name="WorkingWithWebelements" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\WorkingWithWebelements.robot">
-<test id="s1-t1" name="Test Case to demostrate WebElement Operation Keywords" line="5">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221205 14:21:05.467" rpa="false" schemaversion="3">
+<suite id="s1" name="HandlingMouseOperations" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\HandlingMouseOperations.robot">
+<test id="s1-t1" name="Test Case to demonstrate mouse operations in Robot Framework" line="7">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://google.com</arg>
-<arg>Chrome</arg>
-<arg>alias=ChromeRCV</arg>
+<arg>https://www.sugarcrm.com/au/request-demo/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221114 13:00:23.785" level="INFO">Opening browser 'Chrome' to base url 'http://google.com'.</msg>
-<msg timestamp="20221114 13:00:26.724" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221114 13:00:26.726" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=107.0.5304.107)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00BFACD3+2075859]
-	Ordinal0 [0x00B8EE61+1633889]
-	Ordinal0 [0x00A8B7BD+571325]
-	Ordinal0 [0x00A87CD2+556242]
-	Ordinal0 [0x00A7EC5D+519261]
-	Ordinal0 [0x00A7FAEC+522988]
-	Ordinal0 [0x00A7EF27+519975]
-	Ordinal0 [0x00A7E2EB+516843]
-	Ordinal0 [0x00A7E231+516657]
-	Ordinal0 [0x00A7D0A3+512163]
-	Ordinal0 [0x00A7D5AD+513453]
-	Ordinal0 [0x00A8D0CE+577742]
-	Ordinal0 [0x00AEBC7D+965757]
-	Ordinal0 [0x00AD731C+881436]
-	Ordinal0 [0x00AEB56A+963946]
-	Ordinal0 [0x00AD7136+880950]
-	Ordinal0 [0x00AAFEFD+720637]
-	Ordinal0 [0x00AB0F3F+724799]
-	GetHandleVerifier [0x00EAEED2+2769538]
-	GetHandleVerifier [0x00EA0D95+2711877]
-	GetHandleVerifier [0x00C8A03A+521194]
-	GetHandleVerifier [0x00C88DA0+516432]
-	Ordinal0 [0x00B9682C+1665068]
-	Ordinal0 [0x00B9B128+1683752]
-	Ordinal0 [0x00B9B215+1683989]
-	Ordinal0 [0x00BA6484+1729668]
-	BaseThreadInitThunk [0x76ECFEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x773F7BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x773F7B8E+238]
-</msg>
-<status status="FAIL" starttime="20221114 13:00:23.784" endtime="20221114 13:00:26.733"/>
+<msg timestamp="20221205 14:21:08.945" level="INFO">Opening browser 'chrome' to base url 'https://www.sugarcrm.com/au/request-demo/'.</msg>
+<status status="PASS" starttime="20221205 14:21:08.943" endtime="20221205 14:21:18.086"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221114 13:00:26.734" endtime="20221114 13:00:26.735"/>
+<status status="PASS" starttime="20221205 14:21:18.087" endtime="20221205 14:21:18.385"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id:interest_market_c0</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20221205 14:21:19.006" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221205 14:21:19.007" level="FAIL">Element with locator 'id:interest_market_c0' not found.</msg>
+<status status="FAIL" starttime="20221205 14:21:18.386" endtime="20221205 14:21:19.012"/>
+</kw>
+<kw name="Mouse Down" library="SeleniumLibrary">
+<arg>xpath://*[@id="field25"]/div/input</arg>
+<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.013" endtime="20221205 14:21:19.013"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.013" endtime="20221205 14:21:19.014"/>
+</kw>
+<kw name="Mouse Up" library="SeleniumLibrary">
+<arg>xpath://*[@id="field25"]/div/input</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.014" endtime="20221205 14:21:19.014"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.015" endtime="20221205 14:21:19.015"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath://*[@id="menu-item-115"]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.016" endtime="20221205 14:21:19.016"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>4s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221114 13:00:26.735" endtime="20221114 13:00:26.735"/>
+<status status="NOT RUN" starttime="20221205 14:21:19.016" endtime="20221205 14:21:19.016"/>
 </kw>
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<var>${attr}</var>
-<arg>xpath://*[@id="tsf"]//div[3]/center/input[1]</arg>
-<arg>class</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="NOT RUN" starttime="20221114 13:00:26.736" endtime="20221114 13:00:26.736"/>
+<kw name="Mouse Down On Link" library="SeleniumLibrary">
+<arg>xpath://*[@id="menu-item-107"]/a</arg>
+<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.017" endtime="20221205 14:21:19.017"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${attr}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221114 13:00:26.737" endtime="20221114 13:00:26.737"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.017" endtime="20221205 14:21:19.017"/>
 </kw>
-<doc>Test Case to demostrate WebElement Operation Keywords</doc>
-<status status="FAIL" starttime="20221114 13:00:23.782" endtime="20221114 13:00:26.740">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
-  (Session info: chrome=107.0.5304.107)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00BFACD3+2075859]
-	Ordinal0 [0x00B8EE61+1633889]
-	Ordinal0 [0x00A8B7BD+571325]
-	Ordinal0 [0x00A87CD2+556242]
-	Ordinal0 [0x00A7EC5D+519261]
-	Ordinal0 [0x00A7FAEC+522988]
-	Ordinal0 [0x00A7EF27+519975]
-	Ordinal0 [0x00A7E2EB+516843]
-	Ordinal0 [0x00A7E231+516657]
-	Ordinal0 [0x00A7D0A3+512163]
-	Ordinal0 [0x00A7D5AD+513453]
-	Ordinal0 [0x00A8D0CE+577742]
-	Ordinal0 [0x00AEBC7D+965757]
-	Ordinal0 [0x00AD731C+881436]
-	Ordinal0 [0x00AEB56A+963946]
-	Ordinal0 [0x00AD7136+880950]
-	Ordinal0 [0x00AAFEFD+720637]
-	Ordinal0 [0x00AB0F3F+724799]
-	GetHandleVerifier [0x00EAEED2+2769538]
-	GetHandleVerifier [0x00EA0D95+2711877]
-	GetHandleVerifier [0x00C8A03A+521194]
-	GetHandleVerifier [0x00C88DA0+516432]
-	Ordinal0 [0x00B9682C+1665068]
-	Ordinal0 [0x00B9B128+1683752]
-	Ordinal0 [0x00B9B215+1683989]
-	Ordinal0 [0x00BA6484+1729668]
-	BaseThreadInitThunk [0x76ECFEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x773F7BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x773F7B8E+238]
-</status>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath://*[@id="menu-item-19419"]/a</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.017" endtime="20221205 14:21:19.017"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.018" endtime="20221205 14:21:19.018"/>
+</kw>
+<kw name="Mouse Out" library="SeleniumLibrary">
+<arg>xpath://*[@id="menu-item-19419"]/a</arg>
+<doc>Simulates moving the mouse away from the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.018" endtime="20221205 14:21:19.018"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.018" endtime="20221205 14:21:19.019"/>
+</kw>
+<kw name="Mouse Down On Image" library="SeleniumLibrary">
+<arg>xpath://footer//div[1]/a/img</arg>
+<doc>Simulates a mouse down event on an image identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.019" endtime="20221205 14:21:19.019"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.020" endtime="20221205 14:21:19.020"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://demoqa.com/droppable/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.021" endtime="20221205 14:21:19.021"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>xpath://*[@id="draggable"]/p</arg>
+<arg>xpath://*[@id="droppable"]</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.021" endtime="20221205 14:21:19.021"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.022" endtime="20221205 14:21:19.022"/>
+</kw>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<arg>xpath://*[@id="sidebar"]/aside[2]/ul/li[2]/a</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.022" endtime="20221205 14:21:19.022"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.022" endtime="20221205 14:21:19.022"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20221205 14:21:19.023" endtime="20221205 14:21:19.023"/>
+</kw>
+<doc>Test Cas e to demonstrate mouse operations in Robot Framework</doc>
+<status status="FAIL" starttime="20221205 14:21:08.931" endtime="20221205 14:21:19.024">Element with locator 'id:interest_market_c0' not found.</status>
 </test>
-<status status="FAIL" starttime="20221114 13:00:23.140" endtime="20221114 13:00:26.742"/>
+<status status="FAIL" starttime="20221205 14:21:05.510" endtime="20221205 14:21:19.026"/>
 </suite>
 <statistics>
 <total>
@@ -111,7 +132,7 @@ Backtrace:
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="WorkingWithWebelements">WorkingWithWebelements</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="HandlingMouseOperations">HandlingMouseOperations</stat>
 </suite>
 </statistics>
 <errors>
