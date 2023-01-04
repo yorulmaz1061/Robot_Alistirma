@@ -1,129 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221205 14:21:05.467" rpa="false" schemaversion="3">
-<suite id="s1" name="HandlingMouseOperations" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\HandlingMouseOperations.robot">
-<test id="s1-t1" name="Test Case to demonstrate mouse operations in Robot Framework" line="7">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221212 15:09:07.636" rpa="false" schemaversion="3">
+<suite id="s1" name="IfElseDemo" source="C:\Users\sony\PycharmProjects\Robotframework\Tests\IfElseDemo.robot">
+<test id="s1-t1" name="Test Case to demonstrate IF/ELSE in Robot Framework" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.sugarcrm.com/au/request-demo/</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221205 14:21:08.945" level="INFO">Opening browser 'chrome' to base url 'https://www.sugarcrm.com/au/request-demo/'.</msg>
-<status status="PASS" starttime="20221205 14:21:08.943" endtime="20221205 14:21:18.086"/>
+<msg timestamp="20221212 15:09:11.065" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221212 15:09:11.063" endtime="20221212 15:09:16.710"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221205 14:21:18.087" endtime="20221205 14:21:18.385"/>
+<status status="PASS" starttime="20221212 15:09:16.712" endtime="20221212 15:09:17.138"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>id:interest_market_c0</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<msg timestamp="20221205 14:21:19.006" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20221205 14:21:19.007" level="FAIL">Element with locator 'id:interest_market_c0' not found.</msg>
-<status status="FAIL" starttime="20221205 14:21:18.386" endtime="20221205 14:21:19.012"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 15:09:17.140" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20221212 15:09:17.139" endtime="20221212 15:09:17.779"/>
 </kw>
-<kw name="Mouse Down" library="SeleniumLibrary">
-<arg>xpath://*[@id="field25"]/div/input</arg>
-<doc>Simulates pressing the left mouse button on the element ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.013" endtime="20221205 14:21:19.013"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221212 15:09:17.781" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20221212 15:09:17.779" endtime="20221212 15:09:18.181"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.013" endtime="20221205 14:21:19.014"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="login_button_container"]/div/form/input[3]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221212 15:09:18.183" level="INFO">Clicking button 'xpath://*[@id="login_button_container"]/div/form/input[3]'.</msg>
+<msg timestamp="20221212 15:09:18.533" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221212 15:09:18.535" level="FAIL">Button with locator 'xpath://*[@id="login_button_container"]/div/form/input[3]' not found.</msg>
+<status status="FAIL" starttime="20221212 15:09:18.182" endtime="20221212 15:09:18.541"/>
 </kw>
-<kw name="Mouse Up" library="SeleniumLibrary">
-<arg>xpath://*[@id="field25"]/div/input</arg>
-<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.014" endtime="20221205 14:21:19.014"/>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${items_on_page}</var>
+<arg>xpath://*[@class="inventory_list"]/div</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20221212 15:09:18.542" endtime="20221212 15:09:18.544"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.015" endtime="20221205 14:21:19.015"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${items_on_page} == 10</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE IF</arg>
+<arg>${items_on_page} &lt; 10 and ${items_on_page} &gt; 6</arg>
+<arg>Test Keyword 2</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 3</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20221212 15:09:18.544" endtime="20221212 15:09:18.545"/>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>xpath://*[@id="menu-item-115"]/a</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.016" endtime="20221205 14:21:19.016"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.016" endtime="20221205 14:21:19.016"/>
-</kw>
-<kw name="Mouse Down On Link" library="SeleniumLibrary">
-<arg>xpath://*[@id="menu-item-107"]/a</arg>
-<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.017" endtime="20221205 14:21:19.017"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.017" endtime="20221205 14:21:19.017"/>
-</kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>xpath://*[@id="menu-item-19419"]/a</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.017" endtime="20221205 14:21:19.017"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.018" endtime="20221205 14:21:19.018"/>
-</kw>
-<kw name="Mouse Out" library="SeleniumLibrary">
-<arg>xpath://*[@id="menu-item-19419"]/a</arg>
-<doc>Simulates moving the mouse away from the element ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.018" endtime="20221205 14:21:19.018"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.018" endtime="20221205 14:21:19.019"/>
-</kw>
-<kw name="Mouse Down On Image" library="SeleniumLibrary">
-<arg>xpath://footer//div[1]/a/img</arg>
-<doc>Simulates a mouse down event on an image identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.019" endtime="20221205 14:21:19.019"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.020" endtime="20221205 14:21:19.020"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://demoqa.com/droppable/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.021" endtime="20221205 14:21:19.021"/>
-</kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>xpath://*[@id="draggable"]/p</arg>
-<arg>xpath://*[@id="droppable"]</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.021" endtime="20221205 14:21:19.021"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.022" endtime="20221205 14:21:19.022"/>
-</kw>
-<kw name="Open Context Menu" library="SeleniumLibrary">
-<arg>xpath://*[@id="sidebar"]/aside[2]/ul/li[2]/a</arg>
-<doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.022" endtime="20221205 14:21:19.022"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.022" endtime="20221205 14:21:19.022"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20221205 14:21:19.023" endtime="20221205 14:21:19.023"/>
-</kw>
-<doc>Test Cas e to demonstrate mouse operations in Robot Framework</doc>
-<status status="FAIL" starttime="20221205 14:21:08.931" endtime="20221205 14:21:19.024">Element with locator 'id:interest_market_c0' not found.</status>
+<doc>Test Case to demonstrate IF/ELSE in Robot Framework</doc>
+<status status="FAIL" starttime="20221212 15:09:11.052" endtime="20221212 15:09:18.547">Button with locator 'xpath://*[@id="login_button_container"]/div/form/input[3]' not found.</status>
 </test>
-<status status="FAIL" starttime="20221205 14:21:05.510" endtime="20221205 14:21:19.026"/>
+<status status="FAIL" starttime="20221212 15:09:07.645" endtime="20221212 15:09:18.550"/>
 </suite>
 <statistics>
 <total>
@@ -132,7 +64,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="HandlingMouseOperations">HandlingMouseOperations</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="IfElseDemo">IfElseDemo</stat>
 </suite>
 </statistics>
 <errors>
